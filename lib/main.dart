@@ -8,12 +8,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'QR Reader',
-        initialRoute: 'home',
-        routes: {
-          'home': (_) => HomeScreen(),
-          'mapa': (_) => MapaScreen(),
-        });
+      debugShowCheckedModeBanner: false,
+      title: 'QR Reader',
+      initialRoute: 'home',
+      routes: {
+        'home': (_) => HomeScreen(),
+        'mapa': (_) => MapaScreen(),
+      },
+      theme: ThemeData(
+          appBarTheme: AppBarTheme(backgroundColor: Colors.deepPurple),
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+            backgroundColor: Colors.deepPurple,
+          )),
+    );
   }
 }
